@@ -13,6 +13,7 @@
 		DB1E8C7624B87CE200D4D1BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1E8C7424B87CE200D4D1BE /* Main.storyboard */; };
 		DB1E8C7824B87CE700D4D1BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB1E8C7724B87CE700D4D1BE /* Assets.xcassets */; };
 		DB1E8C7B24B87CE700D4D1BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB1E8C7924B87CE700D4D1BE /* LaunchScreen.storyboard */; };
+		DB1E8C8524B9D95300D4D1BE /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1E8C8424B9D95300D4D1BE /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DB1E8C7724B87CE700D4D1BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB1E8C7A24B87CE700D4D1BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB1E8C7C24B87CE700D4D1BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB1E8C8424B9D95300D4D1BE /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DB1E8C7724B87CE700D4D1BE /* Assets.xcassets */,
 				DB1E8C7924B87CE700D4D1BE /* LaunchScreen.storyboard */,
 				DB1E8C7C24B87CE700D4D1BE /* Info.plist */,
+				DB1E8C8424B9D95300D4D1BE /* Meme.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB1E8C7324B87CE200D4D1BE /* ViewController.swift in Sources */,
+				DB1E8C8524B9D95300D4D1BE /* Meme.swift in Sources */,
 				DB1E8C6F24B87CE200D4D1BE /* AppDelegate.swift in Sources */,
 				DB1E8C7124B87CE200D4D1BE /* SceneDelegate.swift in Sources */,
 			);
@@ -291,7 +295,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.project.MemeMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Udacity.MemeMe-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +313,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.project.MemeMe;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Udacity.MemeMe-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
