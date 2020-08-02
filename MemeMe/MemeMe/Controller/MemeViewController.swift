@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class MemeViewController: UIViewController{
 
     // MARK: Outlets
     
@@ -26,6 +26,11 @@ class ViewController: UIViewController{
     // MARK: Meme Model
     
     var meme: Meme!
+    
+    //MARK: Other Variables
+    
+    let topText = "TOP"
+    let bottomText = "BOTTOM"
     
     // MARK: View Life Cycle
     
@@ -62,8 +67,9 @@ class ViewController: UIViewController{
     }
 
     @IBAction func cancel(_ sender: Any) {
-        meme = Meme(topText: "TOP", bottomText: "BOTTOM", originalImage: nil, memedImage: nil)
+        meme = Meme(topText: topText, bottomText: bottomText, originalImage: nil, memedImage: nil)
         reloadUI()
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
@@ -78,7 +84,7 @@ class ViewController: UIViewController{
     
 }
 
-extension ViewController{
+extension MemeViewController{
     
     // MARK: Keyboard Setup Functions
     
@@ -131,7 +137,7 @@ extension ViewController{
     // MARK: UI Functions
     
     private func configureUI(){
-        meme = Meme(topText: "TOP", bottomText: "BOTTOM", originalImage: nil, memedImage: nil)
+        meme = Meme(topText: topText, bottomText: bottomText, originalImage: nil, memedImage: nil)
         
         pickerController = UIImagePickerController()
         pickerController.delegate = self
@@ -192,14 +198,17 @@ extension ViewController{
     }
     
     private func save(){
-        // let meme = self.meme
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
 
 // MARK: Image Picker Delegates
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+extension MemeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             meme.originalImage = image
@@ -215,7 +224,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 
 // MARK: Text Field Delegates
 
-extension ViewController: UITextFieldDelegate{
+extension MemeViewController: UITextFieldDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.text = ""
     }
