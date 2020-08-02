@@ -1,5 +1,6 @@
-# MemeMe 1.0
-First part of Second Project for iOS Nanodegree by Udacity
+# MemeMe 2.0
+Second Project for iOS Nanodegree by Udacity
 
 # Project Overview
-With this first version of MemeMe, students will create an app that enables a user to take a picture, and add text at the top and bottom to form a meme. The user will be able to share the photo on Facebook and Twitter and also by SMS or email.
+With this app, users can take a picture or select from the library, then add text at the top and bottom of the picture and share that.
+Technologies: Swift, UIKit, Storyboard, MVC Design Pattern.
